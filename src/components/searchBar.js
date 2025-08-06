@@ -1,9 +1,14 @@
 import React from "react";
 import { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch }) => {
     const [inputValue, setInputValue] = useState("Guadalajara, Jal.");
-    const [city, setCity] = useState('');
+    
+    const handleClick = () => {
+        if (onSearch) {
+            onSearch(inputValue);
+        }
+    };
 
     return(
     <div>
@@ -13,10 +18,7 @@ const SearchBar = () => {
         placeholder="Enter location"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}/>
-            <p>Current city: {city}</p>
-            <button onClick={() => setCity(inputValue)}>
-                Search
-            </button>
+            <button onClick={handleClick()}>Search</button>
     </div>
     );
 };
