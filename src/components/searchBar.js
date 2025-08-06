@@ -10,20 +10,21 @@ const SearchBar = () => {
     };
 
     return(
+    <div>
         <input 
         type="text"
         className="search-input"
         placeholder="Enter location"
         value={newCity}
-        onChange={handleClick(newCity)}>
+        onChange={handleClick(newCity)}/>
             <p>
                 Current city: {city}
             </p>
             <button onClick={() => handleClick()}>
                 Search
             </button>
-        </input>
+    </div>
     );
-}
+};
 
 export default SearchBar;
