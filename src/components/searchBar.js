@@ -2,12 +2,8 @@ import React from "react";
 import { useState } from "react";
 
 const SearchBar = () => {
-
-    const [city, setCity] = useState('Guadalajara, Jal.');
-
-    const handleInput = (e) => {
-        setCity(e.target.value);
-    };
+    const [inputValue, setInputValue] = useState("Guadalajara, Jal.");
+    const [city, setCity] = useState('');
 
     return(
     <div>
@@ -15,10 +11,10 @@ const SearchBar = () => {
         type="text"
         className="search-input"
         placeholder="Enter location"
-        value={city}
-        onChange={() => handleInput(city)}/>
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}/>
             <p>Current city: {city}</p>
-            <button onClick={() => console.log("Searching for:", city)}>
+            <button onClick={() => setCity(inputValue)}>
                 Search
             </button>
     </div>
