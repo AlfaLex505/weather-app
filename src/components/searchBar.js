@@ -5,8 +5,8 @@ const SearchBar = () => {
 
     const [city, setCity] = useState('Guadalajara, Jal.');
 
-    const handleClick = (newCity) => {
-        setCity(newCity);
+    const handleInput = (e) => {
+        setCity(e.target.value);
     };
 
     return(
@@ -15,12 +15,10 @@ const SearchBar = () => {
         type="text"
         className="search-input"
         placeholder="Enter location"
-        value={newCity}
-        onChange={handleClick(newCity)}/>
-            <p>
-                Current city: {city}
-            </p>
-            <button onClick={() => handleClick()}>
+        value={city}
+        onChange={() => handleInput(city)}/>
+            <p>Current city: {city}</p>
+            <button onClick={() => console.log("Searching for:", city)}>
                 Search
             </button>
     </div>
