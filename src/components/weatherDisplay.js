@@ -3,7 +3,7 @@ import React from "react";
 const WeatherDisplay = ({ temperature, condition, icon }) => {
     return(
         <div className="weather-display">
-            <p>Temperature is {temperature}</p>
+            <p>Temperature is {temperature}°C</p>
             <p>Condition: {condition}</p>
             {icon && (
                 <img
