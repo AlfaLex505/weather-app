@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
-const WeatherDisplay = () => {
-    const [temperature, setTemperature] = useState('39 °C');
-    const [condition, setCondition] = useState('Sunny');
-
-
+const WeatherDisplay = ({ temperature, condition, icon }) => {
     return(
         <div className="weather-display">
             <p>Temperature is {temperature}</p>
-            <p>{condition}</p>
+            <p>Condition: {condition}</p>
+            {icon && (
+                <img
+                    src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+                    alt={condition}
+                />
+            )}
         </div>
     );
 };
