@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='app-container'>
       <h1>Weather App</h1>
       <SearchBar onSearch={handleSearch}/>
       <WeatherDisplay 
