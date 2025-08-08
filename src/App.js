@@ -3,8 +3,8 @@ import SearchBar from './components/searchBar';
 import WeatherDisplay from './components/weatherDisplay'
 import { useState } from 'react';
 
-// const API_KEY = '9ae1248b740e5b0137ff1c27beb963fb';
-const API_KEY = '9c5990ec93bd5380f4b02abfd5134c9d';
+// const API_KEY = 'Insert API Key';
+const API_KEY = 'Insert API Key';
 
 function App() {
   const [temperature, setTemperature] = useState(null);
