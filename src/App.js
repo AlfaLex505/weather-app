@@ -4,7 +4,7 @@ import WeatherDisplay from './components/weatherDisplay'
 import { useState } from 'react';
 
 // const API_KEY = 'Insert API Key';
-const API_KEY = 'Insert API Key';
+const API_KEY = '9c5990ec93bd5380f4b02abfd5134c9d';
 
 function App() {
   const [temperature, setTemperature] = useState(null);
